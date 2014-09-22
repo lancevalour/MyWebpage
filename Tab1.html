@@ -1,0 +1,166 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="Yicheng Zhang, personal website, homepage">
+  <meta name="author" content="Yicheng Zhang">
+  <meta name="description" content="Personal homepage of Yicheng Zhang">
+
+  <title>
+    My Webpage
+
+  </title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+
+<header>   
+  <div class="title_div">
+
+    <h1 >
+      Welcome
+    </h1>
+
+    <p>
+
+
+    </p>
+
+
+  </div>
+
+
+  <div class="tab_div">
+    <ul class="tab_ul">
+      <li class="welcome_tab"><a href="index.html"> Welcome </a></li>
+      <li class="about_me_tab"><a href="Tab2.html"> About Me </a></li>
+      <li class="project_tab"><a href="Tab3.html"> Work </a></li>
+      <li class="tab4"><a href="Tab4.html"> Interest </a> </li>
+      <li class="tab5" ><a href="Tab5.html"> Activity</a> </li>
+    </ul>
+  </div>
+
+</header>
+
+
+<body>
+
+  <div class="my_picture_div">
+
+    <div id="slideshow">
+     <div>
+       <img  src="image/tab1 image/IMG_0540.jpg" >
+     </div>
+     <div>
+       <img src="image/tab1 image/IMG_1081.jpg">
+     </div>
+      <div>
+       <img src="image/tab1 image/IMG_0834.jpg">
+     </div>
+      <div>
+       <img src="image/tab1 image/IMG_0929.jpg">
+     </div>
+      <div>
+       <img src="image/tab1 image/IMG_1110.jpg" >
+     </div>
+     
+      <div>
+       <img src="image/tab1 image/IMG_1445.jpg">
+     </div>
+      <div>
+       <img src="image/tab1 image/IMG_1651.jpg">
+     </div>
+      <div>
+       <img src="image/tab1 image/IMG_2151.jpg">
+     </div>
+
+       
+
+      
+   </div>
+ </div>
+
+
+
+
+
+
+
+ <div class="introduction_div">
+  <div>
+
+
+
+    <pre>
+      And see the great Achilles, whom we knew.
+      Tho' much is taken, much abides; and tho' 
+      We are not now that strength which in old days
+      Moved earth and heaven, that which we are, we are;
+      One equal temper of heroic hearts,
+      Made weak by time and fate, but strong in will
+      To strive, to seek, to find, and not to yield.
+    </pre>
+  </div> 
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script >
+
+ var random = Math.floor(Math.random()*8);
+
+
+
+/*$("#slideshow > div").hide();
+$("#slideshow > div:eq("+random+")").show();*/
+
+
+$("#slideshow > div").hide();
+
+$("#slideshow > div:eq("+random+")").show().delay(7000).fadeOut(1000);
+
+var last_rad;
+
+setInterval(function(){
+  var rad = Math.floor(Math.random()*8);
+
+
+  if (last_rad == rad){
+    if (rad == 7){
+      rad = rad - 1;
+    }
+    else{
+      rad = rad + 1;
+    }
+    
+    
+  }
+  
+  $("#slideshow > div:eq("+rad+")").fadeIn(1000).delay(5000).fadeOut(1000);
+
+
+  last_rad = rad;
+
+}, 6000);
+
+</script>
+
+
+<footer>
+  <p>
+    © 2014 Yicheng Zhang. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+</html>
